@@ -218,29 +218,34 @@
     .social-icons a:hover {
         background-color: #f1e0cf;
     }
-  /* Add this media query block at the end of your existing CSS styles */
-@media only screen and (max-width: 768px) {
-    nav {
-        height: auto;
-        flex-direction: column;
-        align-items: inline;
-    }
+ /* Adjustments for smartphones */
+ @media only screen and (max-width: 480px) {
+            nav {
+                height: auto;
+            }
 
-    nav .logo {
-        margin: 2x 0;
-    }
+            nav .logo {
+                margin: 20px 0;
+            }
 
-    nav ul {
-        text-align: right;
-        margin: 0;
-        padding: 0;
-    }
+            nav ul {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
 
-    nav ul li {
-        display: block;
-        margin: 2px 0;
-    }
-}
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        /* Adjustments for tablets */
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+            nav ul li {
+                margin: 0 20px;
+            }
+        }
 
    
     </style>
