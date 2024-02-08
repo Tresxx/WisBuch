@@ -107,7 +107,9 @@
           text-align: center;
           padding: 50px;
         }
-
+        .hera {
+            padding: 25px;
+        }
         .tabs {
           display: flex;
           list-style: none;
@@ -235,12 +237,10 @@
     }
 }
 
-/* Adjustments for tablets */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+/* Adjustments for smartphones */
+@media only screen and (max-width: 480px) {
     nav {
         height: auto;
-        flex-direction: column;
-        align-items: center;
     }
 
     nav .logo {
@@ -258,6 +258,14 @@
         margin: 10px 0;
     }
 }
+
+/* Adjustments for tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    nav ul li {
+        margin: 0 20px;
+    }
+}
+
 
   </style>
     </head>
