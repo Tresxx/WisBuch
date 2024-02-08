@@ -218,13 +218,30 @@
     .social-icons a:hover {
         background-color: #f1e0cf;
     }
-    @media only screen and (max-width: 768px) {
-    /* Styles for screens up to 768px wide */
+  /* Add this media query block at the end of your existing CSS styles */
+@media only screen and (max-width: 768px) {
+    nav {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .logo {
+        margin: 20px 0;
+    }
+
+    nav ul {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
 
-@media only screen and (max-width: 480px) {
-    /* Styles for screens up to 480px wide */
-}
    
     </style>
 </head>
