@@ -235,7 +235,29 @@
       .text-box p{
           margin-right: 5%;
       }
-      
+      .tabs {
+        flex-direction: column; /* Change tabs layout to vertical for smaller screens */
+    }
+
+    .tab {
+        padding: 15px 60px; /* Adjust tab padding for smaller screens */
+        width: 99%;
+    }
+    .gallery {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 37px;
+          margin-top: 3%;
+          padding-bottom: 1%;
+    }
+        .gallery img {
+          width: 100%;
+          max-width: 210px; 
+          height: auto;
+          cursor: pointer;
+          margin-left: 35%;
+        }
+        
 }
 
 @media only screen and (max-width: 480px) {
