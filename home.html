@@ -99,14 +99,22 @@
         }
 
         .image1 {
-    width: 100%; /* Set width to 100% to make it responsive */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Ensure Image 1 is behind Image 2 */
     height: auto; /* Let the height adjust proportionally */
 }
 
 .image2 {
+    position: relative; /* Ensure Image 2 remains in the document flow */
+    z-index: 1; /* Ensure Image 2 is in front of Image 1 */
     width: 100%; /* Set width to 100% to make it responsive */
+    max-width: 800px; /* Adjust as needed */
     height: auto; /* Let the height adjust proportionally */
 }
+
 
     .wrapper{
         margin: 50px auto;
@@ -245,9 +253,10 @@
         </nav>
         <hr class="hr1">
         <div class="container">
-            <img src="img/flower.jpg" alt="Image 1" class="image1" width="800  " height="250">
-            <img src="img/logo1.png" alt="Image 2" class="image2" width="800  " height="400">
+            <img src="img/flower.jpg" alt="Image 1" class="image1" width="800" height="250">
         </div>
+        <img src="img/logo1.png" alt="Image 2" class="image2" width="800" height="400">
+    </div>
 
     <div class="wrapper">
         <img src="img/imagess.jpg" alt="image 3" class="image3" width="800  " height="250">
