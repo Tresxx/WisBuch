@@ -40,7 +40,7 @@
         nav .logo {
         width: 200px;
         cursor: pointer;
-        margin-right: 10%;
+        margin-right: 2%;
         margin-top: 2%;
         align-items: left; 
         }
@@ -107,9 +107,7 @@
           text-align: center;
           padding: 50px;
         }
-        .hera {
-            padding: 25px;
-        }
+
         .tabs {
           display: flex;
           list-style: none;
@@ -213,60 +211,65 @@
     .social-icons a:hover {
         background-color: #f1e0cf;
     }
-   /* Adjustments for smartphones */
-@media only screen and (max-width: 480px) {
-    nav {
-        height: auto;
+    @media only screen and (max-width: 768px) {
+      /* Styles for screens up to 768px wide */
+      nav ul {
         flex-direction: column;
-        align-items: center;
-    }
-
-    nav .logo {
-        margin: 20px 0;
-    }
-
-    nav ul {
-        text-align: center;
-        margin: 0;
-        padding: 0;
     }
 
     nav ul li {
-        display: block;
-        margin: 10px 0;
+        margin: 5px 0; /* Adjust margin as needed */
     }
+      .nav .logo{
+          margin-right: 2%;
+      }
+      .text-box p{
+          margin-right: 5%;
+      }
 }
 
-/* Adjustments for smartphones */
 @media only screen and (max-width: 480px) {
-    nav {
-        height: auto;
-    }
-
-    nav .logo {
-        margin: 20px 0;
-    }
-
-    nav ul {
-        text-align: center;
-        margin: 0;
-        padding: 0;
+  nav ul {
+        flex-direction: column;
     }
 
     nav ul li {
-        display: block;
-        margin: 10px 0;
+        margin: 5% 0; /* Adjust margin as needed */
+    }
+      .nav .logo{
+          margin-right: 2%;
+      }
+      @media only screen and (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+    header {
+        padding: 30px; /* Reduce padding for smaller screens */
+    }
+
+    .tabs {
+        flex-direction: column; /* Change tabs layout to vertical for smaller screens */
+    }
+
+    .tab {
+        padding: 15px 60px; /* Adjust tab padding for smaller screens */
     }
 }
 
-/* Adjustments for tablets */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    nav ul li {
-        margin: 0 20px;
+@media only screen and (max-width: 480px) {
+    /* Styles for screens up to 480px wide */
+    header {
+        padding: 20px; /* Further reduce padding for smaller screens */
+    }
+
+    .tabs {
+        flex-direction: column; /* Keep tabs layout vertical for very small screens */
+    }
+
+    .tab {
+        padding: 10px 40px; /* Further adjust tab padding for very small screens */
     }
 }
 
-
+    }
   </style>
     </head>
     <body>
