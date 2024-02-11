@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harry Potter and the Sorcerer's Stone 1</title>
-    <link rel="icon" href="img/W.jpg" type="image/x-icon">
+    <title>Fisheyes</title>
+    <link rel="icon" href="img/E.jpg" type="image/x-icon">
 
     <style>
       * {
@@ -22,16 +22,16 @@
       }
       .story10 {
         font-family: 'Lucida Sans', 'Lucida Sans Regular';
-        padding: 50px;
-        margin-left: 20%;
-        margin-right: 20%;
-        text-align: justify;
-        font-size: large;
+        padding: 25px;
+        margin-top: 25px;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        text-align: justify;  
       }
       h1{
         text-align: center;
       }
-      h3{
+      h2{
         text-align: center;
       }
       .first-letter {
@@ -41,11 +41,13 @@
       }
       .action-buttons {
         position: fixed;
-        top: 20px;
+        top: 2px;
         right: 20px;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 3px;
+        transition: top 0.3s; /* Smooth transition for button hide/show */
+        z-index: 1; /* Ensure it's behind h1 */
       }
       .action-button {
         padding: 10px 20px;
@@ -69,12 +71,30 @@
         background-color: #e6ccb2;
         color: #000  ;
       }
+@media screen and (max-width: 768px) {
+    .action-buttons {
+        top: 1px;
+        right: 10px;
+    }
+    h1 {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .action-buttons {
+        top: 1px;
+        right: 5px;
+    }
+    h1 {
+        margin-top: 20px;
+    }
+}
     </style>
 
 </head>
 <body>
    <!-- Action Buttons -->
-   <div class="action-buttons">
+   <div class="action-buttons" id="actionButtons">
        <!-- Dark Mode Toggle Button -->
        <button id="darkModeToggle" class="action-button" onclick="toggleDarkMode()"> ☽</button>
        <!-- Add to Library Button -->
@@ -83,7 +103,7 @@
 
    <div class="story10">
     <h1>Fisheyes</h1>
-    <h3>by: Ai Jiang</h3> <br> <br>
+    <h2>by: Ai Jiang</h2> <br> <br>
     <p><i><span class="first-letter">I</span> am not a horrible person,</i> I murmur to myself in the basement at night when my family is at home—half my family. 
             Voices of actors and actresses from a Cantonese drama drift down the stairs, mingling with the words in my head, 
             the ones leaving my lips, as I sit with my legs folded against my chest in darkness. The chair I sit in sways, 
@@ -312,11 +332,11 @@
     </div>
 
     <script>
-         // Function to toggle dark mode
+        // Function to toggle dark mode
         function toggleDarkMode() {
             var body = document.body;
             body.classList.toggle('dark-mode');
-
+  
             // Toggle button text based on mode
             var darkModeToggle = document.getElementById('darkModeToggle');
             if (body.classList.contains('dark-mode')) {
@@ -325,33 +345,44 @@
                 darkModeToggle.textContent = ' ☽';
             }
         }
-
-        // add a book to the library
-function addToLibrary(bookTitle) {
-    // Get existing library data from local storage
-    var libraryData = localStorage.getItem('library');
-
-    var library = [];
-    if (libraryData) {
-        library = JSON.parse(libraryData);
-    }
-
-    // Check if the library has reached the maximum limit (10 books)
-    if (library.length >= 10) {
-        alert('You have reached the maximum limit of 10 books in your library.');
-        return; // Stop execution if the limit is reached
-    }
-
-    library.push(bookTitle);
-
-    localStorage.setItem('library', JSON.stringify(library));
-
-    alert('The book has been added to your library!');
-
-    displayLibrary();
-}
-
-        
+  
+        // Function to add a book to the library
+        function addToLibrary(bookTitle) {
+            // Get existing library data from local storage
+            var libraryData = localStorage.getItem('library');
+  
+            var library = [];
+            if (libraryData) {
+                library = JSON.parse(libraryData);
+            }
+  
+            // Check if the library has reached the maximum limit (10 books)
+            if (library.length >= 10) {
+                alert('You have reached the maximum limit of 10 books in your library.');
+                return; // Stop execution if the limit is reached
+            }
+  
+            library.push(bookTitle);
+  
+            localStorage.setItem('library', JSON.stringify(library));
+  
+            alert('The book has been added to your library!');
+  
+            displayLibrary();
+        }
+  
+        var prevScrollPos = window.pageYOffset;
+        var actionButtons = document.getElementById("actionButtons");
+  
+  window.onscroll = function() {
+      if (window.pageYOffset === 0) {
+          actionButtons.style.top = "10px";
+          actionButtons.style.display = "flex";
+      } else {
+          actionButtons.style.top = "-50px"; // Adjust this value based on the button height
+          actionButtons.style.display = "none";
+      }
+  }
     </script>
-</body>
-</html>
+  </body>
+  </html>

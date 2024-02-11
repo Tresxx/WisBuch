@@ -40,7 +40,7 @@
         nav .logo {
         width: 200px;
         cursor: pointer;
-        margin-right: 10%;
+        margin-right: 2%;
         margin-top: 2%;
         align-items: left; 
         }
@@ -218,36 +218,36 @@
     .social-icons a:hover {
         background-color: #f1e0cf;
     }
- /* Adjustments for smartphones */
- @media only screen and (max-width: 480px) {
-            nav {
-                height: auto;
-            }
+    @media only screen and (max-width: 768px) {
+      /* Styles for screens up to 768px wide */
+      nav ul {
+        flex-direction: column;
+    }
 
-            nav .logo {
-                margin: 20px 0;
-            }
+    nav ul li {
+        margin: 5px 0; /* Adjust margin as needed */
+    }
+      .nav .logo{
+          margin-right: 2%;
+      }
+      .text-box p{
+          margin-right: 5%;
+      }
+}
 
-            nav ul {
-                text-align: center;
-                margin: 0;
-                padding: 0;
-            }
+@media only screen and (max-width: 748px) {
+  nav ul {
+        flex-direction: column;
+    }
 
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-        }
+    nav ul li {
+        margin: 5% 0; /* Adjust margin as needed */
+    }
+      .nav .logo{
+          margin-right: 2%;
+      }
+}
 
-        /* Adjustments for tablets */
-        @media only screen and (min-width: 481px) and (max-width: 768px) {
-            nav ul li {
-                margin: 0 20px;
-            }
-        }
-
-   
     </style>
 </head>
 <body>

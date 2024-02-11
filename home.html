@@ -40,7 +40,8 @@
          nav .logo{
         width: 200px;
         cursor: pointer;
-        margin-right: 10%;
+        margin-right: 2%;
+        margin-left: 0%;
         margin-top: 2%;
         align-items: left;
         
@@ -99,23 +100,25 @@
         }
 
         .image1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1; /* Ensure Image 1 is behind Image 2 */
-    height: auto; /* Let the height adjust proportionally */
-}
 
-.image2 {
-    position: relative; /* Ensure Image 2 remains in the document flow */
-    z-index: 1; /* Ensure Image 2 is in front of Image 1 */
-    width: 100%; /* Set width to 100% to make it responsive */
-    max-width: 500px; /* Adjust as needed */
-    height: auto; /* Let the height adjust proportionally */
-}
-
-
+            height: 200px;
+            width: 199%;
+            z-index: 1;
+            margin-right:0.5%;
+            margin-bottom: 1%;
+            margin-left: 1%;
+            margin-top: 0%;       
+        }
+        .image2{
+        position: absolute;
+            top: 60%;
+            left: 40%; 
+            transform: translate(-50%, -50%);
+            z-index: 2; 
+            width: 60%;
+            max-width: 100%;
+            height: auto;
+        }
     .wrapper{
         margin: 50px auto;
         width: 100%;
@@ -227,12 +230,28 @@
     }
 
     nav ul li {
-        margin: 10px 0; /* Adjust margin as needed */
+        margin: 5px 0; /* Adjust margin as needed */
+    }
+}@media only screen and (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+    .image1 {
+        width: 160%; /* Adjust as needed */
+    }
+    .nav .logo{
+        margin-right: 5%;
+    }
+    .text-box p{
+        margin-right: 5%;
     }
 }
 
-    @media only screen and (max-width: 480px) {
-    /* Styles for screens up to 480px wide */
+@media only screen and (max-width: 480px) {
+    .image1 {
+        max-width: 165%;
+    }
+    .nav .logo{
+        margin-right: 5%;
+    }
 }
     
     
@@ -253,10 +272,9 @@
         </nav>
         <hr class="hr1">
         <div class="container">
-            <img src="img/flower.jpg" alt="Image 1" class="image1" width="800" height="250">
+            <img src="img/flower.jpg" alt="Image 1" class="image1" width="800  " height="250">
+            <img src="img/logo1.png" alt="Image 2" class="image2" width="800  " height="400">
         </div>
-        <img src="img/logo1.png" alt="Image 2" class="image2" width="800" height="400">
-    </div>
 
     <div class="wrapper">
         <img src="img/imagess.jpg" alt="image 3" class="image3" width="800  " height="250">
