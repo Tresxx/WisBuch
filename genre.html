@@ -260,10 +260,82 @@
         
 }
 
+@media only screen and (max-width: 768px) {
+      /* Styles for screens up to 768px wide */
+      nav ul {
+        flex-direction: column;
+    }
+
+    nav .logo {
+        width: 150px;
+        cursor: pointer;
+        margin-right: 2%;
+        margin-top: 2%;
+        align-items: left; 
+        }
+        nav ul li{
+        list-style: none;
+        display: inline-flex;
+        margin-bottom: 0%;
+        margin-right: 0%;
+        max-width: 75%;
+        }
+        nav ul li a{
+        text-decoration: none;
+        color:#7f5539;
+        font-weight: 600;
+        font-size: small;
+        position: relative;
+        margin-top: 10%;
+        }
+      .text-box p{
+          margin-right: 5%;
+      }
+      .sticky nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky nav ul li {
+    display: inline-block;
+    margin: 0 10px; /* Adjust as needed */
+}
+
+.sticky nav ul li a {
+    text-decoration: none;
+    color: #7f5539;
+    font-weight: 600;
+    font-size: large;
+    position: relative;
+    padding: 4px;
+}
+
+.sticky nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 3px;
+    background: #9c6644;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s; 
+}
+
+.sticky nav a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+}
+
 @media only screen and (max-width: 480px) {
-  nav ul {
+    nav ul {
             flex-direction: column;
             max-width: 100%;
+            
         }
 
         nav .logo {
@@ -276,77 +348,67 @@
         nav ul li{
         list-style: none;
         display: inline-flex;
-        margin: 10px 0px;
         margin-bottom: 0%;
         margin-right: 0%;
         max-width: 70%;
-        margin-left: 0;
-        
+        margin-left: 0;        
         }
         nav ul li a{
         text-decoration: none;
         color:#7f5539;
         font-weight: 600;
         font-size: small;
-        position: relative;
+        position: center;
         margin-top: 10%;
-        }
-        .sticky {
-        position: fixed;
-        top: 0;
-        width: 110%;
-        z-index: 1000;
-        background-color: #e6ccb2; 
-        padding-left: 20px;
-        
-        }
-      @media only screen and (max-width: 768px) {
-    /* Styles for screens up to 768px wide */
-    header {
-        padding: 30px; /* Reduce padding for smaller screens */
-    }
+        padding-right: 10%;
 
-    .tabs {
-        flex-direction: column; /* Change tabs layout to vertical for smaller screens */
-    }
-
-    .tab {
-        padding: 15px 60px; /* Adjust tab padding for smaller screens */
-        width: 99%;
-    }
-    .gallery {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 37px;
-          margin-top: 3%;
-          padding-bottom: 1%;
-    }
-        .gallery img {
-          width: 100%;
-          max-width: 210px; 
-          height: auto;
-          cursor: pointer;
-          margin-left: 40%;
         }
-        
+        .sticky nav {
+    display: flex;
+    justify-content: left;
+    padding-left: 2%;
 }
 
-@media only screen and (max-width: 480px) {
-    /* Styles for screens up to 480px wide */
-    header {
-        padding: 20px; /* Further reduce padding for smaller screens */
-    }
-
-    .tabs {
-        flex-direction: column; /* Keep tabs layout vertical for very small screens */
-    }
-
-    .tab {
-        padding: 10px 40px; /* Further adjust tab padding for very small screens */
-    }
+.sticky nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.sticky nav ul li {
+    display: inline-block;
+    margin: 0 10px; /* Adjust as needed */
+}
+
+.sticky nav ul li a {
+    text-decoration: none;
+    color: #7f5539;
+    font-weight: 600;
+    font-size: small;
+    position: relative;
+    padding: 2%;
+}
+
+.sticky nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 3px;
+    background: #9c6644;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s; 
+}
+
+.sticky nav a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
     }
+    
   </style>
     </head>
     <body>
