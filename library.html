@@ -52,26 +52,37 @@
             width: 100%; 
             height: auto; 
         }
-        nav ul{
-        flex: 1;
-        text-align: right;
-        margin-right: 50px;
+        nav ul {
+            flex-direction: column;
+            max-width: 100%;
         }
         nav ul li{
         list-style: none;
         display: inline-flex;
-        margin: 30px 30px;
+        margin: 10px 0px;
         margin-bottom: 0%;
         margin-right: 0%;
+        max-width: 70%;
+        margin-left: 0;
         
         }
         nav ul li a{
         text-decoration: none;
         color:#7f5539;
         font-weight: 600;
-        font-size: large;
+        font-size: small;
         position: relative;
-        padding: 4px;
+        margin-top: 10%;
+        margin-right: 5%;
+        }
+        .sticky {
+        position: fixed;
+        top: 0;
+        width: 110%;
+        z-index: 1%;
+        background-color: #e6ccb2; 
+        padding-left: 20px;
+        font-size: small;
         }
         nav ul li a::after {
         content: '';
@@ -201,42 +212,8 @@
     @media only screen and (max-width: 768px) {
       /* Styles for screens up to 768px wide */
       nav ul {
-        flex-direction: column;
-    }
-
-    nav .logo {
-        width: 150px;
-        cursor: pointer;
-        margin-right: 2%;
-        margin-top: 2%;
-        align-items: left; 
-        }
-        nav ul li{
-        list-style: none;
-        display: inline-flex;
-        margin: 30px 30px;
-        margin-bottom: 0%;
-        margin-right: 0%;
-        max-width: 75%;
-        
-        }
-      .text-box p{
-          margin-right: 5%;
-      }
-}
-
-@media only screen and (max-width: 480px) {
-    nav ul {
             flex-direction: column;
             max-width: 100%;
-        }
-
-        nav .logo {
-        width: 100px;
-        cursor: pointer;
-        margin-right: 0%;
-        margin-top: 2%;
-        align-items: left; 
         }
         nav ul li{
         list-style: none;
@@ -255,14 +232,53 @@
         font-size: small;
         position: relative;
         margin-top: 10%;
+        padding-right: 2%;
         }
         .sticky {
         position: fixed;
         top: 0;
         width: 110%;
-        z-index: 1000;
+        z-index: 1%;
         background-color: #e6ccb2; 
         padding-left: 20px;
+        font-size: small;
+        }
+      .text-box p{
+          margin-right: 5%;
+      }
+}
+
+@media only screen and (max-width: 480px) {
+    nav ul {
+            flex-direction: column;
+            max-width: 100%;
+        }
+        nav ul li{
+        list-style: none;
+        display: inline-flex;
+        margin: 10px 0px;
+        margin-bottom: 0%;
+        margin-right: 0%;
+        max-width: 70%;
+        margin-left: 0;
+        
+        }
+        nav ul li a{
+        text-decoration: none;
+        color:#7f5539;
+        font-weight: 600;
+        font-size: small;
+        position: relative;
+        margin-top: 10%;
+        padding: 2%;        
+    }
+        .sticky {
+        position: fixed;
+        top: 0;
+        width: 110%;
+        z-index: 1%;
+        background-color: #e6ccb2; 
+        padding-left: 50px;
         font-size: small;
         }
 }
@@ -370,7 +386,7 @@
           // mapping of book titles to content URLs
           var bookURLMap = {
               'The Hunger Games': 'hungergaames.htm',
-              'Harry Potter and the Sorcerer\'s Stone 1': 'harrypotter1.htm',
+              'Harry Potter and the Sorcerers Stone 1': 'harrypotter1.htm',
               'Harry Poter and the Chamber of Secrets 2': 'harrypotter2.htm',
               'Harry Potter and the Prisoner of Azkaban 3': 'harrypotter3.htm',
               'Harry Potter and the Goblet of Fire 4': 'harrypotter4.htm',
@@ -422,7 +438,7 @@
           // mapping of book image URLs
           var bookImageMap = {
               'The Hunger Games': 'img/hungergaames.jpg',
-              'Harry Potter and the Sorcerer\'s Stone 1': 'img/harrypotter1.jpg',
+              'Harry Potter and the Sorcerers Stone 1': 'img/harrypotter1.jpg',
               'Harry Poter and the Chamber of Secrets 2': 'img/harrypotter2.jpg',
               'Harry Potter and the Prisoner of Azkaban 3': 'img/harrypotter3.jpg',
               'Harry Potter and the Goblet of Fire 4': 'img/harrypotter4.jpg',
