@@ -229,12 +229,23 @@
       .text-box p{
           margin-right: 5%;
       }
+      .sticky .logo{
+            display: none;
+        }
+        .sticky nav ul {
+            text-align: center;
+            margin-right: 0;
+        }
+        .sticky nav ul li{
+            margin: 0 20px;
+        }
 }
 
 @media only screen and (max-width: 480px) {
     nav ul {
             flex-direction: column;
             max-width: 100%;
+            
         }
 
         nav .logo {
@@ -252,13 +263,14 @@
         max-width: 70%;
         margin-left: 0;
         
+        
         }
         nav ul li a{
         text-decoration: none;
         color:#7f5539;
         font-weight: 600;
         font-size: small;
-        position: relative;
+        position: center;
         margin-top: 10%;
         }
         .sticky {
@@ -269,6 +281,16 @@
         background-color: #e6ccb2; 
         padding-left: 20px;
         font-size: small;
+        }
+        .sticky .logo{
+            display: none;
+        }
+        .sticky nav ul {
+            text-align: center;
+            margin-right: 0;
+        }
+        .sticky nav ul li{
+            margin: 0 20px;
         }
 }
     
